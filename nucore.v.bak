@@ -1,0 +1,4 @@
+module nucore (input clk, output [63:0] ALU_out, output z_flag);
+
+
+endmodule

@@ -1,0 +1,32 @@
+module InstDecoder (inst,ALU_control,regA,regB,write_A,write_B);
+input [38:0] inst;
+output [2:0] ALU_control;
+output [3:0] rs;
+output [3:0] rt;
+output write_A;
+output write_B;
+
+assign opcode = inst[38:36];
+
+always @(inst)
+begin
+  
+	if(inst[31:26]==6'b000000)
+	begin
+	rs = inst[25:21];
+	rt = inst[20:16];
+	rd = inst[15:11];
+	funct = inst[5:0];
+	end
+	else
+	begin
+	rs = inst[25:21];
+	rt = inst[20:16];
+	addr = inst[15:0];
+	end
+
+end
+
+endmodule
+
+

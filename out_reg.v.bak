@@ -1,0 +1,13 @@
+//Output register; the output of ALU is stored in this register.
+module out_reg (clk, in, out);
+
+input clk;
+input [31:0] in;
+output reg [31:0] out;
+
+always @(posedge clk)
+begin
+out <= in;
+end
+
+endmodule

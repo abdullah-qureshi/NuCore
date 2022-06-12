@@ -1,0 +1,11 @@
+module register_tb;
+
+reg[4:0] rreg;
+reg[4:0] wreg;
+reg clk;
+reg w_en;
+reg [31:0] in;
+wire [31:0] out;
+register_file regA ();
+
+endmodule
